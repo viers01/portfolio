@@ -1,0 +1,200 @@
+summary
+    outline: none
+a
+    text-decoration: none
+
+    &__left
+
+    &__main
+        font-size: 24px
+        line-height: 29px
+        color: $selectColor
+.nav
+    background: #F8F3F4
+    height: 140px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &__main
+        font-size: 24px
+        line-height: 29px
+        color: $selectColor
+    &__link:last-child a
+        color: $selectColor
+    &__list
+        list-style-type: none
+        display: flex
+
+    & li:not(:last-child)::after
+        content: "/"
+        padding: 0 8px
+    &__item
+        font-weight: 300
+        font-size: 14px
+        line-height: 17px
+        color: $colorShadow
+        text-decoration: none
+
+.filter__details[open]
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+
+.filter
+    width: 360px
+    position: relative
+    &__summary
+        font-weight: 600
+        font-size: 14px
+        line-height: 17px
+        color: #000000
+        padding-right: 11px
+
+    &__details
+        box-sizing: border-box
+        z-index: 1
+        position: absolute
+        width: 360px
+        margin-top: 39px
+        padding: 16px
+        &[open]
+            background: #FFFFFF
+            & .filter__summary
+                color: $selectColor
+            & path
+                fill: $selectColor
+
+    &__details-in
+        margin-top: 16px
+        &[open] .filter__heading-in
+            color: $selectColor
+
+    &__summary-in
+        border-left: 5px solid $selectColor
+
+    &__heading-in
+        padding: 8px 0 11px 11px
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 17px
+        display: block
+        color: #6F6E6E
+        border-bottom: 1px solid #EBEBEB
+
+    &__ul
+        list-style-type: none
+        padding-left: 17px
+        padding-top: 24px
+        & a
+            font-size: 14px
+            line-height: 17px
+            color: #6F6E6E
+
+.fetured-filter
+    display: flex
+    gap: $gap
+
+    &__text
+        font-weight: 600
+        font-size: 14px
+        color: #000000
+        margin-right: 11px
+
+    &__right
+        width: 360px
+        margin-top: 51px
+        margin-bottom: 64px
+
+    &__list
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        gap: $gap
+
+    & a:not(:first-child)
+        margin-left: 28px
+
+    &__item
+        font-size: 14px
+        line-height: 17px
+        color: $colorShadow
+        text-decoration: none
+        display: flex
+        align-items: center
+
+.feture-filter__ico
+    margin-left: 10px
+
+.pagination
+    border: 1px solid #EBEBEB
+    border-radius: 3px
+    display: flex
+    margin: 48px auto 96px
+    align-items: center
+
+    &__link
+        font-weight: 300
+        font-size: 16px
+        line-height: 19px
+        padding: 12px
+        color: #EBEBEB
+
+    &__link:hover
+        color: #EF5B70
+
+    &__item
+        display: flex
+        padding: 15px
+
+.select
+    position: relative
+    z-index: 1
+    color: $colorShadow
+    & span
+        cursor: pointer
+    .select > span
+        display: flex
+        align-items: center
+        width: 100px
+        height: 20px
+        text-align: center
+        vertical-align: middle
+
+        +font(14px, $colorShadow)
+
+.spisok input
+    margin-right: 8px
+
+.select:hover .spisok
+
+    display: flex
+    flex-direction: column
+
+.feture-filter__ico
+    transition: 0.2s
+    margin-bottom: 3px
+
+.select:hover .feture-filter__ico
+    transform: rotate(180deg)
+    transition: 0.2s linear
+
+.spisok
+    padding: 6px
+    color: $colorShadow
+    min-width: 79px
+    display: none
+    position: absolute
+    background: #FFFFFF
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+    overflow: auto
+    font-size: 14px
+
+    & span
+        padding: 8px
+        white-space: nowrap
+        display: flex
+        align-items: center
+        cursor: pointer
+
+    &__box
+        display: flex
+        align-items: center

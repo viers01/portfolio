@@ -1,0 +1,421 @@
+@import vars
+@import mixins
+*
+    margin: 0
+    padding: 0
+
+body
+    font-family: 'Lato', sans-serif
+    font-weight: 300
+a
+    text-decoration: none
+
+summary
+    display: block
+
+summary::-webkit-details-marker
+    display: none
+
+.blue
+    background-color: $selectColor
+
+.center
+    padding-left: calc(50% - 570px)
+    padding-right: calc(50% - 570px)
+
+.box
+    position: relative
+    overflow: hidden
+
+.header
+
+    background: #222
+    height: 75px
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    &__link:not(:last-child)
+        margin-right: 33px
+
+    &__search
+        margin-left: 41px
+
+.switcher
+    position: absolute
+    right: -$wSwitcher
+    top: 75px
+    width: $wSwitcher
+    background-color: #fff
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+    transition: 0.1s
+    transition-timing-function: ease-out
+    z-index: 1
+    padding: 34px
+
+    &__title
+        font-weight: bold
+        font-size: 14px
+        line-height: 17px
+        margin-bottom: 24px
+    &__subtitle
+        +font(16px,$selectColor)
+        margin-bottom: 12px
+    &__list
+        display: flex
+        flex-direction: column
+        margin-bottom: 20px
+    &__link
+        font-size: 14px
+        line-height: 17px
+        color: $colorShadow
+        margin-left: 10px
+
+    &__item
+        list-style-type: none
+        &:not(:last-child)
+            margin-bottom: 11px
+
+#switcher
+    display: none
+
+#switcher:checked ~ .switcher
+    right: 0
+    transition: 0.1s
+    transition-timing-function: ease-out
+
+.section
+    background: #F1E4E6
+    display: flex
+    padding-left: calc(50% - 800px)
+    padding-right: calc(50% - 800px)
+
+    &__man
+        width: 50%
+
+    &__photo
+        width: 100%
+
+    &__decription
+        border-left: 12px solid$selectColor
+        padding-left: 16px
+        height: 100%
+        margin-top: 17%
+        margin-left: 3%
+
+    &__h1
+        font-weight: 900
+        font-size: 48px
+        line-height: 58px
+        color: $contentColor
+        text-transform: uppercase
+
+    &__h2
+        font-weight: 400
+        font-size: 32px
+        line-height: 38px
+        color: $contentColor
+        text-transform: uppercase
+
+.main
+    padding-top: 65px
+    padding-bottom: 96px
+
+    &__link
+        flex-grow: 1
+
+    &__top
+        display: flex
+        gap: 30px
+
+    &__item
+        flex-grow: 1
+        transition: 0.2s
+        height: 260px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        background-position: center
+
+    &__item:hover
+        transform: scale(1.02)
+        transition: 0.2s
+    &__text
+        font-weight: normal
+        font-size: 16px
+        line-height: 19px
+        color: #FFFFFF
+
+    &__title
+        font-weight: bold
+        font-size: 24px
+        line-height: 29px
+        color: $selectColor
+    &__bot
+        background-image: url(../images/item4.png)
+        background-position: center
+        height: 180px
+        margin-top: 30px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        transition: 0.2s
+        &:hover
+            transform: scale(1.02)
+            transition: 0.2s
+
+.item1
+    background-image: url(../images/item1.png)
+    background-size: cover
+
+.item2
+    background-image: url(../images/item2.png)
+    background-size: cover
+
+.item3
+    background-image: url(../images/item3.png)
+    background-size: cover
+
+.fetured
+    display: flex
+    flex-direction: column
+
+    &__list
+        display: flex
+        flex-wrap: wrap
+        gap: 30px
+        justify-content: center
+
+    &__title
+        text-align: center
+        padding-bottom: 48px
+
+    &__text
+        font-size: 30px
+        line-height: 36px
+        color: $contentColor
+
+    &__desc
+        font-size: 14px
+        line-height: 17px
+        color: #9F9F9F
+        margin-top: 6px
+
+    &-item
+        width: 360px
+        position: relative
+
+    &-item__bottom
+        padding-top: 25px
+        padding-bottom: 20px
+        padding-left: 17px
+        padding-right: 29px
+        background: #F8F8F8
+
+    &__photo
+        width: 100%
+
+    &-item:hover .btn
+        display: flex
+
+    &-item:hover .fetured__photo
+        filter: brightness(0.5)
+
+    &-item_photo
+        display: flex
+
+    &-item__title
+        font-size: 13px
+        line-height: 16px
+        color: #000000
+
+    &-item__description
+        font-weight: 300
+        font-size: 14px
+        line-height: 17px
+        padding-top: 13px
+        padding-bottom: 18px
+        color: #5D5D5D
+
+    &-item__price
+        font-size: 16px
+        line-height: 19px
+        color: $selectColor
+
+    &__btn
+        text-decoration: none
+        display: inline-block
+        padding: 14px 38px
+        font-size: 16px
+        line-height: 19px
+        border: 1px solid #FF6A6A
+        color: #F26376
+        margin: 63px auto 83px
+        &:hover
+            background: $selectColor
+            color: #fff
+            transition: 0.2s
+
+.btn
+    width: 138px
+    height: 43px
+    display: none
+    position: absolute
+    font-size: 14px
+    line-height: 17px
+    color: #FFFFFF
+    border: 1px solid #FFFFFF
+    align-items: center
+    text-transform: uppercase
+    gap: 10px
+    text-decoration: none
+    top: 188px
+    left: 111px
+    padding-left: 5px
+    transition: 0.2s
+
+    &:hover
+        background-color: $selectColor
+        border: 1px solid $selectColor
+        transition: 0.2s
+
+.advantages
+    padding: 104px 0
+    background: $contentColor
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    &__list
+        display: flex
+        gap: 30px
+
+    &-item
+        width: ($widthSize / 3) - $gap
+        text-align: center
+        padding: 20px
+
+    &-item_title
+        font-size: 19.96px
+        line-height: 24px
+        color: #FBFBFB
+        margin-top: 28px
+        margin-bottom: 16px
+
+    &-item__description
+        font-family: Lato
+        font-style: normal
+        font-weight: 300
+        font-size: 13.972px
+        line-height: 17px
+        color: #FBFBFB
+
+.footer
+    height: 448px
+    background-image: url(../images/footerbg.png)
+    background-position: left
+    background-size: cover
+    background-repeat: no-repeat
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    &__left
+        width: 50%
+        text-align: center
+    &__right
+        @extend .footer__left
+        +centerColumn
+    &__avatar
+        margin-bottom: 30px
+    &__desc
+        font-family: Lato
+        font-style: italic
+        font-weight: normal
+        font-size: 20px
+        line-height: 24px
+        text-align: center
+        color: $contentColor
+    &__title
+        font-weight: bold
+        font-size: 24px
+        line-height: 167.2%
+        text-align: center
+        color: $contentColor
+    &__promotion
+    +font(16px, $contentColor)
+    &__input
+        background: #E1E1E1
+        width: 256px
+        height: 49px
+        border: none
+        border-radius: 13px 0 0 13px
+        padding: 0 22px
+        font-size: 14px
+        line-height: 17px
+        color: $contentColor
+        opacity: 0.67
+    &__btn
+        font-size: 14px
+        line-height: 17px
+        text-align: center
+        color: #FFFFFF
+        text-decoration: none
+        border-radius: 0 14px 14px 0
+        background: $selectColor
+        padding: 15px 8px
+        border: none
+        cursor: pointer
+    &__subarea
+        display: flex
+        text-align: center
+        justify-content: center
+        margin-top: 32px
+
+.allright
+
+    height: 79px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background: $contentColor
+
+    &__contact li
+        list-style-type: none
+    &__title
+        color: #fff
+        font-size: 16px
+        line-height: 19px
+
+.svg:hover .svg__bg
+    fill: $selectColor
+
+.svg:hover .svg__text
+    fill: #fff
+
+.svg__ret:hover .ret__text
+    fill: #fff
+
+.svg__ret:hover >.ret__bg
+    fill: $selectColor
+
+.svg__inst:hover .inst__bg
+    fill: $selectColor
+
+.svg__inst:hover .inst__text
+    fill: #fff
+
+.svg__tw:hover .tw__bg
+    fill: $selectColor
+
+.svg__tw:hover .tw__text
+    fill: #fff
+
+@import catalog
+@import product
+@import cart
+@import reg
+@import m768
+@import w375

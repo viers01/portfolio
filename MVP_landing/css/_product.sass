@@ -1,0 +1,101 @@
+$marginSlider: 4%
+
+*
+    box-sizing: border-box
+
+.product-slider
+    background: #F7F7F7
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
+    height: 777px
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-bottom: -$marginSlider
+    &__box
+        max-width: 50% - $marginSlider
+    &__model
+        width: 100%
+    &__line
+        display: block
+        width: 641px
+        height: 1px
+        background-color: #EAEAEA
+        margin: 65px 0
+
+.slider-desc
+    border: 1px solid #EAEAEA
+    margin: 0 auto
+    height: 600px
+    width: 1140px
+    background: #fff
+    margin-bottom: 128px
+    padding: 64px
+    text-align: center
+    &__filter
+        display: flex
+        align-items: center
+        flex-direction: column
+        gap: 48px
+    &__header
+        +font(14px, $selectColor)
+
+.slider-line
+    display: inline-block
+    width: 63px
+    border: 2px solid $selectColor
+    margin-top: 12px
+    margin-bottom: 12px
+
+.desc-bottom
+    width: 645px
+    margin: 0 auto
+
+    &__item
+        font-weight: 300
+        font-size: 18px
+        line-height: 22px
+        color: #4D4D4D
+
+    &__item2
+        max-width: 570px
+        font-weight: 300
+        font-size: 14px
+        line-height: 17px
+        text-align: center
+
+        color: #5E5E5E
+        margin: 48px auto 32px
+
+    &__price
+        font-weight: 300
+        font-size: 24px
+        line-height: 29px
+        color: $selectColor
+.product__btn
+    display: flex
+    text-decoration: none
+    font-size: 16px
+    line-height: 19px
+    border: 1px solid #FF6A6A
+    color: #F26376
+    margin: 0 auto
+    align-items: center
+    width: 212px
+    height: 48px
+    justify-content: flex-start
+    transition: 0.2s
+
+    &__text
+
+    & svg
+        margin: 0 28px
+
+    &:hover
+        background-color: $selectColor
+        transition: 0.2s
+        color: #fff
+    &:hover svg path
+        fill: #fff
+
+.mt120
+    margin-top: 120px
