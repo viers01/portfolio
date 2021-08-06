@@ -4,7 +4,7 @@ const e = require("express");
 const app = express();
 
 
-app.use(express.json()); // Даем знать приложению, что работаем с json'ом
+app.use(express.json()); // json
 
 app.get('/', function(req, res) {
     res.set('Access-Control-Allow-Origin', '*')
@@ -21,8 +21,8 @@ app.get('/', function(req, res) {
  * Запуск сервера
  * @type {string|number}
  */
-// const port = process.env.PORT || 5555;
-const port = 5555; // чтобы не смущало process.env.PORT (если не стартует на 3000, то меняем на другой 8080 или 8888)
+
+const port = 5555;
 app.listen(port, () => {
     console.log(`Listening ${port} port`);
 });
