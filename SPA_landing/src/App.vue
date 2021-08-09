@@ -101,16 +101,35 @@
         <div class="works__top">
           <h1 class="text">Наши работы</h1>
           <div class="works__slider">
-            <a href="" class="slide">Монтаж сайдинга</a>
-            <a href="" class="slide">Пластиковые окна</a>
-            <a href="" class="slide">Видеонаблюдение</a>
+            <a href="#" class="slide" @click.prevent = "setActive('siding')"
+               :class="{'active__slide':isActive('siding')}"
+            >Монтаж сайдинга</a>
+            <a href="#" class="slide" @click.prevent = "setActive('windowService')"
+               :class="{'active__slide':isActive('windowService')}"
+            >Пластиковые окна</a>
+            <a href="#" class="slide" @click.prevent = "setActive('monitoring')"
+               :class="{'active__slide':isActive('monitoring')}"
+            >Видеонаблюдение</a>
           </div>
         </div>
         <div class="works__bot">
           <pfitem
-          v-for="item in this.goods"
-          v-bind:key="item.id"
+          :class="{'active':isActive('siding')}"
+          v-for="item in this.goods.siding"
+          v-bind:key="item.id + item.title"
           :item = item
+          ></pfitem>
+          <pfitem
+              :class="{'active':isActive('windowService')}"
+              v-for="item in this.goods.windowService"
+              v-bind:key="item.id + item.title"
+              :item = item
+          ></pfitem>
+          <pfitem
+              :class="{'active':isActive('monitoring')}"
+              v-for="item in this.goods.monitoring"
+              v-bind:key="item.id + item.title"
+              :item = item
           ></pfitem>
         </div>
       </div>
@@ -198,14 +217,20 @@ export default {
   name: 'App',
   data(){
     return{
-      goods:[]
+      goods:[],
+      activeItem: 'siding'
     }
   },
   components: {
   pfitem
   },
   methods:{
-
+    isActive (menuItem) {
+      return this.activeItem === menuItem
+    },
+    setActive (menuItem) {
+      this.activeItem = menuItem
+    }
   },
   computed :{
     getJson(){
@@ -215,6 +240,7 @@ export default {
   mounted() {
     this.getJson.then(({data})=>{
       this.goods = data
+      console.log(this.goods)
     })
     var c1 = new rellax('.form__parallax', {
       speed: 3.5,
@@ -223,7 +249,6 @@ export default {
   }
 }
 </script>
-
 <style>
 
 </style>

@@ -1,7 +1,6 @@
 <template>
-
   <div class="works__card" ref="popup">
-
+    <transition name="fade">
     <popup
         v-if="showPopup"
         v-on:closePopup="showPopup = false"
@@ -15,7 +14,7 @@
       </div>
 
     </popup>
-
+    </transition>
     <div class="card__img">
       <img class="works__img" :src="item.img" alt="">
     </div>
