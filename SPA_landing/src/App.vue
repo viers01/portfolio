@@ -240,7 +240,6 @@ export default {
   mounted() {
     this.getJson.then(({data})=>{
       this.goods = data
-      console.log(this.goods)
     })
     var c1 = new rellax('.form__parallax', {
       speed: 3.5,
