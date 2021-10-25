@@ -1,0 +1,10 @@
+.b-container{
+    max-width: 940px;
+    margin: 0 auto;
+    &--header{
+        max-width: 1200px;
+    }
+    @media screen and (max-width: 768px) {
+        padding: 0 15px;
+    }
+}
