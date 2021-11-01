@@ -39,6 +39,9 @@
     }
     @media screen and (min-width: 768px) {
         min-height: 768px;
+    }
+    @media screen and (min-width: 1230px) {
+        min-height: 768px;
         &__img {
             display: unset;
             position: absolute;
@@ -46,4 +49,5 @@
             right: 10px;
         }
     }
+
 }

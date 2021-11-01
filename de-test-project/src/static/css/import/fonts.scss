@@ -58,4 +58,12 @@
     src: url("../fonts/Whitney-Light/Whitney-Light.woff") format("woff"), url("../fonts/Whitney-Light/Whitney-Light.eot") format("eot"), url("../fonts/Whitney-Light/Whitney-Light.ttf") format("ttf");
 }
 
-@font-face {font-family: "Galien"; src: url("//db.onlinewebfonts.com/t/d1243736bfe07b546f8f1e54e7804afb.eot"); src: url("//db.onlinewebfonts.com/t/d1243736bfe07b546f8f1e54e7804afb.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/d1243736bfe07b546f8f1e54e7804afb.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/d1243736bfe07b546f8f1e54e7804afb.woff") format("woff"), url("//db.onlinewebfonts.com/t/d1243736bfe07b546f8f1e54e7804afb.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/d1243736bfe07b546f8f1e54e7804afb.svg#Galien") format("svg"); }
+@font-face {
+    font-family: "Galien";
+    src: url("../fonts/Galien/Galien.eot"); /* IE9*/
+    src: url("../fonts/Galien/Galien.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/Galien/Galien.woff2") format("woff2"), /* chrome、firefox */
+    url("../fonts/Galien/Galien.woff") format("woff"), /* chrome、firefox */
+    url("../fonts/Galien/Galien.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("../fonts/Galien/Galien.svg#Galien Regular") format("svg"); /* iOS 4.1- */
+}

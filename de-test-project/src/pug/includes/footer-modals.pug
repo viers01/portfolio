@@ -1,4 +1,4 @@
-.b-popup.b-popup--hidden
+.b-popup.b-popup--hidden(data-type='popup')
     .b-popup__content
         span.b-popup__close
         form(action="post").js-form-validation
@@ -11,3 +11,7 @@
                 label.b-form__row(for="message" ) Message
                     textarea#message(name="message", cols="20", rows="4", placeholder ="Your Message")  
                 button(type="submit").b-popup__btn.b-btn.b-title.b-title-desc.js-validation-btn  Submit
+.b-popup.b-popup--hidden(data-type='thanks')
+    .b-popup__content
+        span.b-popup__close
+        h3 Your message successfully send

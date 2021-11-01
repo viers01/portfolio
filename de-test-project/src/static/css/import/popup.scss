@@ -115,7 +115,10 @@
     }
 
     input.b-popup--error {
-        border: 1px solid red;
+        border: 2px solid red;
+    }
+    input.b-popup--done {
+        border: 2px solid rgb(23, 163, 41);
     }
     @media screen and (min-width: 768px) {
         &__content {

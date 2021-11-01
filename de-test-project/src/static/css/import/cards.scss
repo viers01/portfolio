@@ -59,6 +59,18 @@
         .b-cards--container {
             margin-top: 180px;
             padding-bottom: 212px;
+            justify-content: center;
+        }
+
+        .b-cards--container {
+            gap: 70px;
+        }
+
+    }
+    @media screen and (min-width: 900px) {
+        .b-cards--container {
+            margin-top: 180px;
+            padding-bottom: 212px;
             justify-content: space-between;
         }
         .b-cards__item:nth-child(odd) {
