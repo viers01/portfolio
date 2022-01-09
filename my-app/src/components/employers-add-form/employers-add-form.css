@@ -1,0 +1,15 @@
+.employers-add-form{
+    padding: 20px;
+    background-color: rgb(245, 245, 245);
+    flex-direction: column;
+    gap: 20px;
+}
+.employers-form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 20px;
+}
+.employers-form button {
+    background-color: black;
+}

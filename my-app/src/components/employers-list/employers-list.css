@@ -1,0 +1,13 @@
+.employers-list{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgb(245, 245, 245);
+
+}
+.employers-list .increase {
+    background-color: #feffdb;
+}
+.employers-list .increase .fa-star{
+    color: #ff8e8e;
+}

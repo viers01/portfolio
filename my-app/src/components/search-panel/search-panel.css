@@ -1,0 +1,7 @@
+.search-panel{
+    background-color: rgb(245, 245, 245);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
